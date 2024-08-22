@@ -1,19 +1,14 @@
 {
-  "homepage": "https://romtuk.github.io/portfolio",
-  
-
   "devDependencies": {
     "tailwindcss": "^3.4.9"
   },
   "name": "portfolio24",
   "version": "1.0.0",
   "main": "tailwind.config.js",
+  
   "scripts": {
-    "build": "npx tailwindcss -i ./styles.css -o ./src/output.css --watch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "build": "npx tailwindcss -i ./styles.css -o ./src/output.css --watch"
   },
-
   "keywords": [],
   "author": "Rom Tuk",
   "license": "ISC",
