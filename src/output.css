@@ -666,12 +666,6 @@ video {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 :root {
   --color0: #fff;
   --color1: #ACC3CB;
@@ -687,9 +681,9 @@ html {
 }
 
 body {
-  font-family: Poppins;
+  font-family: Poppins, Arial;
   color: var(--color0);
-  background: var(--color3);
+  background: var(--color2);
 }
 
 header {
@@ -700,6 +694,7 @@ header {
 }
 
 footer {
+  position: relative;
   /* display: none !important;
     border-top: 2px solid #ACC3CB17;
     width: 100%;
@@ -770,6 +765,38 @@ footer a:has(img):hover img {
   background-repeat: no-repeat;
 }
 
+nav a{
+  position: relative;
+  color: var(--color1);
+  transition: all .45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav a::after {
+  content: " ";
+  display: block;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition: all .45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 100%;
+  background-image: url(../img/star.svg);
+  background-size: 12px;
+  background-repeat: no-repeat;
+}
+
+nav a:hover{
+  color: var(--color0);
+}
+
+nav a:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
 .btn2:hover::after {
   opacity: 1;
   left: 100%;
@@ -799,7 +826,8 @@ nav a::after {
 }
 
 .intro-wrp {
-  max-width: 1100px;
+  /* max-width: 1100px; */
+  max-width: 920px;
   width: 100%;
   margin: 0 auto;
 }
@@ -826,8 +854,9 @@ nav a::after {
 }
 
 #intro-txt {
-  max-width: 650px;
-  width: 60%;
+  /* max-width: 650px; */
+  /* width: 60%; */
+  max-width: 480px;
 }
 
 h1 {
@@ -877,8 +906,8 @@ h3 {
 
 .contact-wrap {
   margin: 0 auto;
-  max-width: 1100px;
-  padding: 8em 0;
+  max-width: 950px;
+  padding: 8em 52px;
 }
 
 .about-intro,
@@ -1169,10 +1198,17 @@ h3 {
   opacity: 1;
 }
 
+#landscape {
+  position: absolute;
+  bottom: -76px;
+  opacity: 0.7;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
- 
