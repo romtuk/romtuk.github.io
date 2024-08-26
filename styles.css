@@ -260,7 +260,7 @@ h3 {
 
 .about-intro,
 .about-other {
-    margin: 1em 0;
+    /* margin: 1em 0; */
 }
 
 /* .about-pro {
@@ -460,6 +460,8 @@ h3 {
 .contact-info a {
     position: relative;
     width: max-content;
+    opacity: .65;
+    /* margin: 1em 0; */
 }
 
 .ci1,
@@ -492,17 +494,14 @@ h3 {
     filter: brightness(180%);
 }
 
-.contact-info a path,
+.contact-info a svg:not(#gmail) path,
 .ci1 path {
     fill: var(--color0);
     opacity: .65;
     transition: all .5s ease;
 }
 
-.contact-info a {
-    opacity: .65;
-    margin: 1em 0;
-}
+
 
 .contact-info a:hover {
     opacity: 1;
@@ -531,6 +530,10 @@ h3 {
     transition: all 1s ease, background .5s ease;
 }
 
+/* .tech-bubble:last-child:nth-child(3n - 2) {
+    grid-column-end: 3;
+  } */
+
 .tech-bubble:hover {
     background: #17111d
 }
@@ -554,12 +557,15 @@ h3 {
 #landscape {
     position: absolute;
     bottom: 0;
-    opacity: 0.7;
+    opacity: 0.95;
     transform: translateX(-50%);
     left: 50%;
 }
 
-
+#gmail {
+    width: 32px;
+    filter: grayscale(100%);
+}
 
 @media screen and (max-width: 640px) {
     #landscape {
@@ -569,11 +575,12 @@ h3 {
 
     /* .job */
 
-    .job p { 
+    .job p {
         margin-left: 0;
         font-size: 12px;
     }
-    .job p span{
+
+    .job p span {
         display: none;
     }
 }
