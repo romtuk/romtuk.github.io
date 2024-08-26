@@ -568,6 +568,11 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -576,6 +581,14 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .flex {
@@ -630,9 +643,24 @@ video {
   background-color: var(--color3);
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-3 {
@@ -642,6 +670,10 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.pr-0 {
+  padding-right: 0px;
 }
 
 .pt-24 {
@@ -699,14 +731,9 @@ header {
 
 footer {
   position: relative;
-  /* display: none !important;
-    border-top: 2px solid #ACC3CB17;
-    width: 100%;
-    background-color: var(--color2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px; */
+  width: 100%;
+  overflow: hidden;
+  min-height: 340px;
 }
 
 footer div {
@@ -890,10 +917,6 @@ h2,
   font-weight: bold;
 }
 
-.about-pro h3 {
-  margin: 1em 0;
-}
-
 h3 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -920,7 +943,8 @@ h3 {
 .about-wrap,
 .tech-wrap,
 .contact-wrap {
-  padding: 52px;
+  /* padding: 52px; */
+  /* pad: 13rem; */
   width: 100%;
   max-width: 920px;
   margin: 0 auto;
@@ -929,7 +953,7 @@ h3 {
 .contact-wrap {
   margin: 0 auto;
   max-width: 950px;
-  padding: 8em 52px;
+  /* padding: 8em 52px; */
 }
 
 .about-intro,
@@ -961,7 +985,7 @@ h3 {
   /* border: 4px solid #050315; */
   border: 2px solid #ACC3CB4F;
   padding: 0.5em 0.75em;
-  margin: .5em 0;
+  /* margin: .5em 0; */
   background: #070518;
   border-radius: 5px;
   position: relative;
@@ -976,6 +1000,11 @@ h3 {
   position: absolute;
   top: 18px;
   left: -17px;
+}
+
+.job p {
+  text-align: right;
+  height: 100%;
 }
 
 .job a {
@@ -1015,7 +1044,7 @@ h3 {
 }
 
 .workplace {
-  padding: 1em 0;
+  /* padding: 1em 0; */
 }
 
 .workplace p {
@@ -1061,7 +1090,8 @@ h3 {
   padding: 6px;
   border: 3px solid var(--color1);
   border-radius: 50%;
-  margin-top: 2.25em;
+  /* margin-top: 2.25em; */
+  margin-top: 1.75em;
 }
 
 .p-last .p-circle {
@@ -1085,7 +1115,7 @@ h3 {
 }
 
 .tech-wrap {
-  padding-bottom: 8em;
+  /* padding-bottom: 8em; */
 }
 
 .tech-grid {
@@ -1219,15 +1249,27 @@ h3 {
 
 #landscape {
   position: absolute;
-  bottom: -76px;
+  bottom: 0;
   opacity: 0.7;
   transform: translateX(-50%);
   left: 50%;
 }
 
-@media screen and (max-width: 600px) {
-  .about-wrap, .tech-wrap, .contact-wrap{
-    padding: .75em;
+@media screen and (max-width: 640px) {
+  #landscape {
+    transform: translateX(-50%) scale(0.6);
+    bottom: -7%;
+  }
+
+  /* .job */
+
+  .job p {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .job p span{
+    display: none;
   }
 }
 
