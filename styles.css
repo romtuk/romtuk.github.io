@@ -497,7 +497,7 @@ h3 {
     transition: all .35s ease;
 }
 .ct-2{
-    transition: all .35s .5s ease !important;
+    transition: all .35s ease !important;
 }
 
 .ci1,
