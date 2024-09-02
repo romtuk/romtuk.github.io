@@ -192,8 +192,7 @@ nav a {
     transform: translate(0px, -6px) rotate(45deg);
     width: 20px;
 }
-
-#menu {}
+ 
 
 /* #menu.served {
     display: flex;
@@ -214,8 +213,7 @@ nav a {
     font-size: 9px;
     position: absolute;
     transform: translate(-50%, 0%);
-    text-transform: uppercase;
-    will-change: var(--color0);
+    text-transform: uppercase; 
     transition: all .35s ease;
     left: 50%;
     top: -16px;
@@ -238,7 +236,6 @@ nav a {
 
 #lang-btn span {
     color: transparent;
-    will-change: color;
 }
 
 #lang-btn:hover span {
@@ -257,7 +254,6 @@ nav a:not(#lang-btn)::after {
     transition: all .45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translate(-50%, -50%) rotate(45deg) scale(0.5);
     border-radius: 100%;
-    will-change: transform;
     background-image: url(../img/star.svg);
     background-size: 12px;
     background-repeat: no-repeat;
@@ -894,6 +890,7 @@ h3 {
         text-transform: uppercase;
         align-items: end;
         padding-right: 2em; 
+        will-change: transform, opacity;
         transform: translateX(-50vw);
     }
 
