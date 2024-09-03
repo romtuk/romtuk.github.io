@@ -664,10 +664,6 @@ video {
   flex-direction: column-reverse;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
@@ -678,10 +674,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .gap-1 {
@@ -1163,6 +1155,12 @@ h2,
 .about-pro h3 {
   font-size: 2rem;
   font-weight: bold;
+  width: 100%;
+}
+
+.about-pro h3 {
+  max-width: 695px;
+  z-index: 100;
 }
 
 h3 {
@@ -1268,12 +1266,25 @@ h3 {
 .bubble {
   width: 60px;
   height: 60px;
-  background-color: var(--color4);
+  background-color: var(--color0);
   position: absolute;
   top: 7rem;
-  left: calc(0% - 30px);
-  transform: translateX(-50%);
+  /* left: calc(0% - 30px); */
+  left: 0;
+  transform: translateX(-450%) scale(2);
   border-radius: 50%;
+  transition: all .75s cubic-bezier(0.455, 0.03, 0.515, 1.355);
+}
+
+.about-wrap.show .bubble {
+  background-color: var(--color4);
+  transform: translateX(0%) scale(1);
+}
+
+.about-point {
+  width: 100%;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .about-other ul {
@@ -1550,6 +1561,13 @@ h3 {
   opacity: 1;
 }
 
+#moon {
+  z-index: 10;
+  right: 16em;
+  top: 9em;
+  opacity: 0.3;
+}
+
 .tech-stack {
   color: var(--color1);
   padding: 0.5rem 1rem;
@@ -1710,6 +1728,11 @@ h3 {
   .job p span {
     display: none;
   }
+
+  #moon {
+    right: 3em;
+    top: 15em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1752,6 +1775,10 @@ h3 {
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
   }
 
   .md\:py-28 {
