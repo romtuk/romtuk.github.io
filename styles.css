@@ -702,13 +702,7 @@ h3 {
 .met.show {
     opacity: 1;
 }
-
-/* TECH */
-#tech {
-    color: var(--color1);
-
-}
-
+ 
 .tech-grid {
     display: grid
 }
@@ -812,7 +806,7 @@ h3 {
 
 #moon {
     z-index: 10;
-    right: 16em;
+    right: 9vw;
     top: 9em;
     opacity: 0.3;
 }
