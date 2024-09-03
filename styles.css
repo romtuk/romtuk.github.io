@@ -21,16 +21,23 @@ body {
     font-family: Poppins, Arial;
     color: var(--color0);
     background: var(--color2);
-    animation: tocolor 3s ease-out;
 }
+
 @keyframes tocolor {
-    0%{
+    0% {
         filter: grayscale(100%) brightness(0%);
     }
-    100%{
-        filter: grayscale(0%)  brightness(100%);
+
+    100% {
+        filter: grayscale(0%) brightness(100%);
     }
 }
+
+dotlottie-player {
+    position: absolute;
+    bottom: -6px;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -200,7 +207,7 @@ nav a {
     transform: translate(0px, -6px) rotate(45deg);
     width: 20px;
 }
- 
+
 
 /* #menu.served {
     display: flex;
@@ -221,7 +228,7 @@ nav a {
     font-size: 9px;
     position: absolute;
     transform: translate(-50%, 0%);
-    text-transform: uppercase; 
+    text-transform: uppercase;
     transition: all .35s ease;
     left: 50%;
     top: -16px;
@@ -418,6 +425,11 @@ h3 {
 
 }
 
+.about-me h2 {
+    color: var(--color1);
+    text-shadow: 2px 2px #ffffff3b;
+}
+
 .about-me img {
     border-radius: 67px 67px 27px 67px;
     max-width: 290px;
@@ -425,13 +437,13 @@ h3 {
     z-index: 2;
 }
 
-.overlay {
+.overlay.ob {
     z-index: 1;
     content: "";
     display: block;
     width: 100%;
+    max-width: 290px;
     height: 100%;
-    /* background: linear-gradient(-60deg, var(--color1)-50%, var(--color3)25%, var(--color2)150%); */
     background-color: var(--color3);
     position: absolute;
     top: 0;
@@ -682,9 +694,11 @@ h3 {
 .tech-grid {
     display: grid
 }
-.tech-stack{
+
+.tech-stack {
     justify-items: center
 }
+
 .tech-bubble svg {
     fill: var(--color0);
     height: 48px;
@@ -899,7 +913,7 @@ h3 {
         background: var(--color2);
         text-transform: uppercase;
         align-items: end;
-        padding-right: 2em; 
+        padding-right: 2em;
         will-change: transform, opacity;
         transform: translateX(-50vw);
     }
@@ -909,7 +923,7 @@ h3 {
         transform: translateX(0px);
     }
 
-    #lang-btn span {  
+    #lang-btn span {
         left: -21px;
         font-size: 12px;
         top: 0;
