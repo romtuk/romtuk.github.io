@@ -21,8 +21,16 @@ body {
     font-family: Poppins, Arial;
     color: var(--color0);
     background: var(--color2);
+    animation: tocolor 3s ease-out;
 }
-
+@keyframes tocolor {
+    0%{
+        filter: grayscale(100%) brightness(0%);
+    }
+    100%{
+        filter: grayscale(0%)  brightness(100%);
+    }
+}
 header {
     position: fixed;
     width: 100%;
@@ -644,13 +652,13 @@ h3 {
     transition: all 1s 2s ease;
 }
 
-.about-me p {
+/* .about-me p {
     opacity: 0;
 }
 
 .about-me p.show {
     opacity: 1;
-}
+} */
 
 .e1.show {
     transition: all .5s ease;
@@ -672,10 +680,11 @@ h3 {
 }
 
 .tech-grid {
-    display: grid;
-
+    display: grid
 }
-
+.tech-stack{
+    justify-items: center
+}
 .tech-bubble svg {
     fill: var(--color0);
     height: 48px;
@@ -881,6 +890,7 @@ h3 {
         opacity: 0;
         position: absolute;
         inset: 0;
+        right: 0;
         width: 44%;
         height: 100vh;
         flex-direction: column;

@@ -79,11 +79,11 @@
                     class="flex flex-col-reverse md:flex-row-reverse my-4 md:my-24 items-start md:items-center justify-around about-me">
                     <div class="mt-2 md:mt-0">
                         <h2>About me</h2>
-                        <p class="exp e1">I am an experienced <b>Front-end developer</b> with a background in design and
+                        <p class="">I am an experienced <b>Front-end developer</b> with a background in design and
                             development,
                             specializing in creating responsive and user-friendly websites.</p>
                         <br>
-                        <p class="exp e2">With expertise in
+                        <p class="">With expertise in
                             JavaScript, CSS and UI/UX design, I am passionate about bringing digital ideas to life.
                             My skills extend to working with WordPress and other CMS platforms like Magento,
                             allowing me to craft dynamic, content-driven websites that deliver delightful user
@@ -613,17 +613,14 @@
 
             const obs1 = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-
-
+                    if (entry.isIntersecting) { 
                         setTimeout(() => {
                             entry.target.classList.add("show");
-                        }, 300);
+                        }, 2300);
 
                         setTimeout(() => {
                             entry.target.classList.remove("show");
-                        }, 1750);
-                        // observer.unobserve(entry.target);
+                        }, 3750); 
                     }
                 });
             });
