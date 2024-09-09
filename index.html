@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
     <!-- Needs title -->
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6XE1TTBJNK"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XE1TTBJNK"></script> -->
 <script>
     window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-6XE1TTBJNK');
 </script>
@@ -70,7 +70,7 @@
                     </p>
                     <p class="my-3">
                         I am a <strong>Frontend</strong> and <strong>Wordpress</strong> developer with an inclination
-                        towards Web Design.
+                        towards Web Design and animation.
                     </p>
                     <a href="#contact" class="btn2 ob" id="btn2">Let’s work on something together!</a>
                 </div>
@@ -515,16 +515,16 @@
 
     </footer>
 
-    <div id="cookieConsentBanner" class="cookie-banner out">
+    <!-- <div id="cookieConsentBanner" class="cookie-banner out">
         <div class="cookie-content">
             <p>Would you mind having some cookies in order to improve this website and its performance?</p>
             <div class="cookie-buttons">
                 <button id="acceptCookies" class="btn accept">Accept</button>
                 <button id="declineCookies" class="btn decline">Decline</button>
             </div>
-            <!-- <p><a href="/privacy-policy.html" class="cookie-link">Learn more</a></p> -->
+            <p><a href="/privacy-policy.html" class="cookie-link">Learn more</a></p>
         </div>
-    </div>
+    </div> -->
 
 
     <script>
@@ -546,72 +546,6 @@
                 menu.classList.toggle('served');
             })
         }
-
-        // Cookies
-
-        // let bnr = document.getElementById('cookieConsentBanner');
-        // let cookee = false;
-        // function setCookie(name, value, days) {
-        //     var expires = "";
-        //     if (days) {
-        //         var date = new Date();
-        //         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        //         expires = "; expires=" + date.toUTCString();
-        //     }
-        //     document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        // }
-
-        // // Function to get a cookie
-        // function getCookie(name) {
-        //     var nameEQ = name + "=";
-        //     var ca = document.cookie.split(';');
-        //     for (var i = 0; i < ca.length; i++) {
-        //         var c = ca[i];
-        //         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        //         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        //     }
-        //     return null;
-        // }
-
-        // // Function to erase a cookie
-        // function eraseCookie(name) {
-        //     document.cookie = name + '=; Max-Age=-99999999;';
-        // }
-
-        // // Check if the consent cookie is already set
-        // window.onload = function () {
-        //     if (!getCookie('cookieConsent')) {
-        //         bnr.style.display = 'block';
-        //     } 
-        // };
-
-        // // Event listeners for accept and decline buttons
-        // document.getElementById('acceptCookies').addEventListener('click', function () {
-        //     setCookie('cookieConsent', 'accepted', 365);
-        //     // document.getElementById('cookieConsentBanner').style.display = 'none';
-        //     bnr.classList.add("no-banner");
-        //     cookee = true;
-        //     setTimeout(() => {
-        //         bnr.classList.add("out");
-        //                         }, 600);
-
-
-
-        //     // Add your code here to enable cookies or tracking
-        // });
-
-        // document.getElementById('declineCookies').addEventListener('click', function () {
-        //     setCookie('cookieConsent', 'declined', 365);
-        //     // document.getElementById('cookieConsentBanner').style.display = 'none';
-        //     bnr.classList.add("no-banner");
-        //     cookee = true;
-        //     setTimeout(() => {
-        //         bnr.classList.add("out");
-        //                         }, 600);
-
-        //     // Add your code here to disable cookies or tracking
-        // });
-
 
 
         // Intersection Observer
