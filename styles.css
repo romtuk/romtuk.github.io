@@ -981,3 +981,10 @@ h3 {
         top: 15em; 
       }
 }
+
+@media screen and (max-width: 640px) {
+    .about-wrap.show .bubble{
+        display: none;
+    }
+
+}

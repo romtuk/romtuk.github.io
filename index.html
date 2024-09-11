@@ -11,14 +11,14 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <title>Román's Portfolio</title>
-    <link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"> 
+    <link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
 </head>
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XE1TTBJNK"></script> --><!-- <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-6XE1TTBJNK');</script> -->
 
 
 <!-- Welcome!!!-->
 
-<body class="">
+<body onload="playback" class="">
     <div class="cover h-full w-full bg-color3">
     </div>
     <header class="flex flex-row text-color0 justify-between items-center px-6 py-3">
@@ -58,9 +58,13 @@
                 <div id="intro-txt">
                     <h1 class="font-bold text-3xl">Welcome to my website!</h1>
                     <p class="my-3 flex gap-1 relative">Hi! I'm <strong>Román</strong>,
-                    <span>
-                        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player id="hand" src="https://lottie.host/0a4d4bd0-6ae0-424c-9df0-b00c9318a2dd/WYsbbxwQRY.json" background="transparent" speed="1" style="width: 32px; height: 32px" direction="1" playMode="normal" autoplay></dotlottie-player>
-                    </span>
+                        <span>
+                            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                                type="module"></script><dotlottie-player id="hand"
+                                src="https://lottie.host/0a4d4bd0-6ae0-424c-9df0-b00c9318a2dd/WYsbbxwQRY.json"
+                                background="transparent" speed="1" style="width: 32px; height: 32px" direction="1"
+                                playMode="normal" autoplay></dotlottie-player>
+                        </span>
                     </p>
                     <p class="my-3">
                         Making clean, good looking websites that also function in providing a good user experience is my
@@ -118,7 +122,7 @@
 
 
 
-                    <h3 class="my-2">Professional Career</h3> 
+                    <h3 class="my-2">Professional Career</h3>
                     <div class="about-point pr-0 flex flex-row">
                         <div class="point">
                             <div class="p-circle p-first"></div>
@@ -479,8 +483,11 @@
 
         </div>
 
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <dotlottie-player src="https://lottie.host/2fe7ae0c-bd41-47f1-b663-a5c27aa1e8b7/4T73hn0G0f.json" id="moon" background="transparent" speed="1.5" style="z-index: 10;width: 64px; height: 64px;" loop autoplay></dotlottie-player>
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+        <dotlottie-player src="https://lottie.host/2fe7ae0c-bd41-47f1-b663-a5c27aa1e8b7/4T73hn0G0f.json" id="moon"
+            background="transparent" speed="1.5" style="z-index: 10;width: 64px; height: 64px;" loop
+            autoplay></dotlottie-player>
 
         <svg width="2058.17" id="landscape" height="120.69" viewBox="0 0 544.56 31.93"
             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -526,6 +533,25 @@
 
 
     <script>
+        //#Audio#
+        const ctx = new AudioContext();
+        let audio;
+
+        fetch("./sounds/pop.mp3")
+        .then(data => data.arrayBuffer())
+        .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+        .then(decodeAudio =>{
+            audio = decodeAudio;
+        })
+
+        function playback(){
+            const playSound = ctx.createBufferSource();
+            playSound.buffer = audio;
+            playSound.connect(ctx.destination)
+            playSound.start(ctx.currentTime)
+        }
+ 
+
         //#MENU#
 
         var lunch = document.getElementById('lunch');
@@ -539,7 +565,7 @@
         let children = document.getElementById('menu').children;
 
         for (let i = 0; i < children.length; i++) {
-            children[i].addEventListener('click', function () { 
+            children[i].addEventListener('click', function () {
                 lunch.classList.toggle('served');
                 menu.classList.toggle('served');
             })
@@ -554,14 +580,14 @@
 
             const obs1 = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) { 
+                    if (entry.isIntersecting) {
                         setTimeout(() => {
                             entry.target.classList.add("show");
                         }, 2300);
 
                         setTimeout(() => {
                             entry.target.classList.remove("show");
-                        }, 3750); 
+                        }, 3750);
                     }
                 });
             });
