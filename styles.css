@@ -938,7 +938,7 @@ h3 {
         align-items: end;
         padding-right: 2em;
         will-change: transform, opacity;
-        transform: translateX(-50vw);
+        transform: translateX(150vw);
     }
 
     #menu.served {
