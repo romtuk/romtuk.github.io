@@ -31,7 +31,7 @@
             <span class="l1"></span>
             <span class="l2"></span>
         </div>
-        <nav id="menu" onclick="playback()" class="hidden md:flex items-center md:flex-row items-center md:w-auto">
+        <nav id="menu" class="hidden md:flex items-center md:flex-row items-center md:w-auto">
             <!-- <a href="es/index.html" id="lang-btn">
                 <svg width="32" height="31.04332" viewBox="0 0 8.4666667 8.2135448" version="1.1" id="globe"
                     xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
             <a href="#intro">Intro</a>
             <a href="#about">About</a>
             <a href="#tech">Skills</a>
-            <a href="#contact" class="btn1 rounded-full">Contact</a>
+            <a href="#contact" onclick="playback()" class="btn1 rounded-full">Contact</a>
         </nav>
     </header>
     <main>
@@ -74,7 +74,7 @@
                         I am a <strong>Frontend</strong> and <strong>Wordpress</strong> developer with an inclination
                         towards Web Design and animation.
                     </p>
-                    <a href="#contact" class="btn2 ob" id="btn2">Let’s work on something together!</a>
+                    <a href="#contact" onclick="playback()" class="btn2 ob" id="btn2">Let’s work on something together!</a>
                 </div>
             </div>
         </section>
@@ -537,7 +537,7 @@
         const ctx = new AudioContext();
         let audio;
 
-        fetch("./sounds/pop.mp3")
+        fetch("./sounds/pop.ogg")
         .then(data => data.arrayBuffer())
         .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
         .then(decodeAudio =>{
