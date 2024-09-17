@@ -1510,6 +1510,10 @@ h3 {
   transition: all .35s ease;
 }
 
+.tech-bubble:hover #tts rect{
+  fill: #2d79c7;
+}
+
 .ct-2 {
   transition: all .35s ease !important;
 }
@@ -1689,7 +1693,7 @@ h3 {
     align-items: end;
     padding-right: 2em;
     will-change: transform, opacity;
-    transform: translateX(-50vw);
+    transform: translateX(150vw);
   }
 
   #menu.served {

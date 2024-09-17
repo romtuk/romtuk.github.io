@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow Mouse</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      background-color: #f4f4f4;
+    }
+
+    #myElement {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.1s linear;
+    }
+  </style>
+</head>
+<body>
+
+<div id="myElement"></div>
+
+<script>
+  const element = document.getElementById('myElement');
+  const originalPosition = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  const maxDistance = 200;  // Maximum distance for interaction
+  const speed = 0.05;  // Speed factor (adjust to slow down or speed up movement)
+
+  // Function to calculate the distance between two points
+  function distance(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  }
+
+  // Function to move the element towards the mouse
+  function moveTowards(currentX, currentY, targetX, targetY) {
+    const deltaX = targetX - currentX;
+    const deltaY = targetY - currentY;
+    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+    if (distance < maxDistance) {
+      // Move towards the mouse
+      const newX = currentX + deltaX * speed;
+      const newY = currentY + deltaY * speed;
+      return { x: newX, y: newY };
+    }
+
+    // Return to original position if mouse is far away
+    const originX = currentX + (originalPosition.x - currentX) * speed;
+    const originY = currentY + (originalPosition.y - currentY) * speed;
+    return { x: originX, y: originY };
+  }
+
+  // Mouse move event handler
+  document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    const elementRect = element.getBoundingClientRect();
+    const elementX = elementRect.left + elementRect.width / 2;
+    const elementY = elementRect.top + elementRect.height / 2;
+
+    const newPos = moveTowards(elementX, elementY, mouseX, mouseY);
+
+    // Update the element's position
+    element.style.left = `${newPos.x - elementRect.width / 2}px`;
+    element.style.top = `${newPos.y - elementRect.height / 2}px`;
+  });
+</script>
+
+</body>
+</html>

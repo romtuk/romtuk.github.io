@@ -756,6 +756,9 @@ h3 {
 .contact-info a.show {
     transition: all .35s ease;
 }
+.tech-bubble:hover #tts rect{
+    fill: #2d79c7;
+}
 
 .ct-2 {
     transition: all .35s ease !important;
