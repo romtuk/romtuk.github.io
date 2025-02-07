@@ -449,6 +449,7 @@ h3 {
 
 .meimg-c {
     position: relative;
+    margin-bottom: 2em;
 
 }
 .meimg-c figcaption {
@@ -553,7 +554,7 @@ h3 {
 
 .about-wrap.show .bubble {
     /* background-color: var(--color4); */
-    background-color:#25574b;
+    background-color:#244d60;
     transform: translateX(0%) scale(1);
     
 }
@@ -712,7 +713,7 @@ h3 {
 }
 
 .p-last .p-circle {
-    background: #ACC3CB33;
+    background: #acc3cbb9;
 }
 
 .met {
