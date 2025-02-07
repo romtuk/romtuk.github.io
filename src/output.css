@@ -1130,13 +1130,27 @@ nav a::after {
   }
 }
 
+@keyframes floaty {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
 #intro-img img {
-  /* margin-left: 12px; */
   margin-left: .25rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: floaty 1s infinite alternate;
   width: 40%;
 }
 
@@ -1189,6 +1203,16 @@ h3 {
 
 .meimg-c {
   position: relative;
+}
+
+.meimg-c figcaption {
+  z-index: 2;
+  position: absolute;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-top: .25em;
+  opacity: .8;
 }
 
 .about-me h2 {
@@ -1281,7 +1305,8 @@ h3 {
 }
 
 .about-wrap.show .bubble {
-  background-color: var(--color4);
+  /* background-color: var(--color4); */
+  background-color:#25574b;
   transform: translateX(0%) scale(1);
 }
 
@@ -1363,6 +1388,30 @@ h3 {
   bottom: 0;
   left: 0;
   transition: all .5s ease;
+}
+
+.examply{
+  margin: 2em 0;
+}
+
+.examply span {
+  font-size: .85rem;
+  color: #81b7d9;
+  text-transform: capitalize;
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.examply a{
+  -webkit-text-decoration: underline 2px var(--color4);
+          text-decoration: underline 2px var(--color4);
+  transition: all .5s ease;
+}
+
+.examply a:hover{
+  -webkit-text-decoration: underline 2px #6b93a2;
+          text-decoration: underline 2px #6b93a2;
+  color: #d4f2fe;
 }
 
 .present {
