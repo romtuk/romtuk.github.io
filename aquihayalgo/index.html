@@ -356,6 +356,8 @@
                   <span>Ejemplo:</span>
                   <p>
                     <a href="https://www.diegomarin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                       >Diego Marín (Diseño web y maquetación. Magento CMS)</a
                     >
                   </p>
@@ -397,6 +399,8 @@
                   <span>Ejemplo:</span>
                   <p>
                     <a href="https://www.drool.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                       >Drool (Desarrollo web custom con las herramientas de
                       Wordpress)</a
                     >
@@ -993,10 +997,11 @@
     </footer>
 
     <aside class="reflections">
-      <span id="optin" onclick="document.querySelector('.reflections').classList.remove('show')">&#9932;</span>
+      
       <div class="aside-box">
+        <span id="optin" onclick="document.querySelector('.reflections').classList.remove('show')">&#9932;</span>
         <p>Bienvenidos, equipo de <strong>"Aquí hay marketing"</strong>!</p>
-        <img src="logoAHM.png" alt="Aquí hay marketing Logo" />
+        <img class="rely" src="logoAHM.png" alt="Aquí hay marketing Logo" />
         <p><wym>&#9786;</wym>Gracias por visitar mi portfolio</p>
         <p class="sign">- <i>Román</i></p>
       </div>
@@ -1006,16 +1011,22 @@
           color: var(--color2);
           position: fixed;
         }
-        aside img {
+        aside img.rely {
           margin: 1em auto;
           max-width: 248px;
           width: 100%;
+        }
+        .lery{
+
         }
         aside span {
           position: absolute;
           right: 8px;
           top: 8px;
           font-size: 20px;
+        }
+        #optin{
+          cursor: pointer;
         }
         wym {
           font-size: 28px;
@@ -1027,26 +1038,24 @@
           background-color: rgba(255, 255, 255, 0.9);
           text-align: center;
           border-radius: 9px;
+          position: relative;
         }
         .sign {
-          text-align: right;
+          text-align: center;
         }
         .reflections {
           position: fixed;
           top: 50%;
-          z-index: 10;
-          opacity: 0;
-          transition: 1s ease-out;
-          width: 100%;
-          will-change: transform;
+          z-index: 10;  
+          width: 100%; 
           background-color: transparent;
           margin: 0 auto; 
+          display: none;
           transform: translateY(300%);
         }
-        .reflections.show {
-          opacity: 1;
-          transform: translateY(-50%);
-          transition: .75s ease-out;
+        .reflections.show { 
+          transform: translateY(-50%); 
+          display: initial;
         }
       </style>
     </aside>
