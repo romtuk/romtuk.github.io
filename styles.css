@@ -45,6 +45,7 @@ body {
 header {
   position: fixed;
   width: 100%;
+  max-width: 100vw;
   z-index: 100;
   background: #0c0523de;
   backdrop-filter: blur(3px);
@@ -710,6 +711,8 @@ h3 {
 .examply a {
   text-decoration: underline 2px var(--color4);
   transition: all 0.5s ease;
+  text-wrap: wrap;
+  display: block;
 }
 .examply a:hover {
   text-decoration: underline 2px #6b93a2;
@@ -1113,6 +1116,8 @@ h3 {
   display: none;
 }
 
+
+.nmb
 @media screen and (max-width: 640px) {
   #menu {
     display: flex;

@@ -806,6 +806,7 @@ body {
 header {
   position: fixed;
   width: 100%;
+  max-width: 100vw;
   z-index: 100;
   background: #0c0523de;
   -webkit-backdrop-filter: blur(3px);
@@ -1488,6 +1489,8 @@ h3 {
   -webkit-text-decoration: underline 2px var(--color4);
           text-decoration: underline 2px var(--color4);
   transition: all 0.5s ease;
+  text-wrap: wrap;
+  display: block;
 }
 
 .examply a:hover {
@@ -1913,6 +1916,7 @@ h3 {
   display: none;
 }
 
+.nmb
 @media screen and (max-width: 640px) {
   #menu {
     display: flex;
@@ -1932,50 +1936,43 @@ h3 {
     will-change: transform, opacity;
     transform: translateX(150vw);
   }
-
   #menu.served {
     opacity: 1;
     transform: translateX(0px);
   }
-
   #lang-btn span {
     left: -21px;
     font-size: 12px;
     top: 0;
     color: var(--color1);
   }
-
   #lang-btn {
     order: 1;
   }
-
   #intro-img {
     width: 80%;
   }
-
   #landscape {
     transform: translateX(-50%) scale(0.6);
     bottom: -7%;
   }
-
   .about-wrap.show .bubble {
     transform: translateX(-50%) scale(1.3);
   }
-
   .job p {
     margin-left: 0;
     font-size: 12px;
   }
-
   .job p span {
     display: none;
   }
-
   #moon {
     right: 3em;
     top: 15em;
   }
+}
 
+@media screen and (max-width: 640px) {
   .about-wrap.show .bubble {
     display: none;
   }

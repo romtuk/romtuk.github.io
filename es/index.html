@@ -103,7 +103,8 @@
             </p>
             <p class="my-3">
               Soy especialista en crear sitios web limpios y atractivos
-              acompañados de una agradable <eri class="ee">experiencia de usuario</eri>.
+              acompañados de una agradable
+              <eri class="ee">experiencia de usuario</eri>.
             </p>
             <p class="my-3">
               Soy diseñador y desarrollador web <strong>Frontend</strong> y
@@ -133,7 +134,7 @@
           }
           .particle-cont {
             z-index: 1;
-          } 
+          }
           canvas {
             display: block;
             vertical-align: bottom;
@@ -806,7 +807,7 @@
           #butterfly {
             filter: drop-shadow(-1px -2px 40px #ffd2b1);
             width: 102px;
-            height: 102px; 
+            height: 102px;
             background: transparent
               url("../sprites/butterfly-sprite2-small.png") 0 0 no-repeat; /* Our sprite as the viewport background */
             animation: bflow 0.5s steps(12) infinite;
@@ -878,7 +879,7 @@
           </div>
 
           <div class="examply">
-            <h4>Composición + producción de música y sonido</h4>
+            <h4>Composición música + diseño de sonido</h4>
 
             <p>
               Desde hace más de 15 años me dedico a componer, grabar y producir
@@ -893,21 +894,23 @@
                 rel="noopener noreferrer"
                 >"Aura Adventure" de Initori</a
               >
-              dónde me he encargado del sonido: componiendo la <eri class="mm">música</eri> de la banda sonora y creando <eri class="ss">efectos de sonido</eri> a medida.
+              dónde me he encargado del sonido: componiendo la
+              <eri class="mm">música</eri> de la banda sonora y creando
+              <eri class="ss">efectos de sonido</eri> a medida.
             </p>
             <div class="sound-ui">
               <div class="m-row">
-                <button class="music-lib" data-url="musicA.mp3">A</button>
-                <button class="music-lib" data-url="musicB.mp3">B</button>
-                <button class="music-lib" data-url="musicC.mp3">C</button>
-                <button class="music-lib" data-url="musicD.mp3">D</button>
-                <button class="music-lib" data-url="portfoliost.ogg">0</button>
+                <button class="music-lib" data-url="musicA.mp3"></button>
+                <button class="music-lib" data-url="musicB.mp3"></button>
+                <button class="music-lib" data-url="musicC.mp3"></button>
+                <button class="music-lib" data-url="musicD.mp3"></button>
+                <button class="music-lib" data-url="portfoliost.ogg"></button>
               </div>
               <div class="s-row">
-                <button class="music-lib" data-url="soundA.mp3">A</button>
-                <button class="music-lib" data-url="soundB.mp3">B</button>
-                <button class="music-lib" data-url="soundC.mp3">C</button>
-                <button class="music-lib" data-url="soundD.mp3">D</button>
+                <button class="music-lib" data-url="soundA.mp3"></button>
+                <button class="music-lib" data-url="soundB.mp3"></button>
+                <button class="music-lib" data-url="soundC.mp3"></button>
+                <button class="music-lib" data-url="soundD.mp3"></button>
               </div>
             </div>
           </div>
@@ -931,7 +934,10 @@
 
       function musicOn() {
         chip.play();
-        ost.play();
+        setTimeout(() => {
+          ost.play();
+        }, 500);
+        
         music = true;
         play.classList.add("playing");
       }
