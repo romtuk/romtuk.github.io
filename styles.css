@@ -1040,7 +1040,8 @@ h3 {
   background: linear-gradient(180deg,#0b1f3391, transparent);
   border-radius: 4px;
 }
-.ee {
+.ee::after {
+  content: ""; 
   /* border-bottom: 2px solid var(--color2); */
   background-color: #0b1f3391;
   /* padding: 0 4px; */
