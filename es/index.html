@@ -43,7 +43,7 @@
         id="menu"
         class="hidden md:flex items-center md:flex-row items-center md:w-auto"
       >
-        <a href="../index.html" id="lang-btn">
+        <!-- <a href="../index.html" id="lang-btn">
           <svg
             width="32"
             height="31.04332"
@@ -60,7 +60,7 @@
             </g>
           </svg>
           <span>English</span>
-        </a>
+        </a> -->
         <a href="#intro">Inicio</a>
         <a href="#about">Sobre mí</a>
         <a href="#tech">Destrezas</a>
@@ -103,7 +103,7 @@
             </p>
             <p class="my-3">
               Soy especialista en crear sitios web limpios y atractivos
-              acompañados de una agradable experiencia de usuario.
+              acompañados de una agradable <eri class="ee">experiencia de usuario</eri>.
             </p>
             <p class="my-3">
               Soy diseñador y desarrollador web <strong>Frontend</strong> y
@@ -121,41 +121,160 @@
         <div class="count-particles">
           <span class="js-count-particles"></span>
         </div>
-        
+
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        
+
         <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
         <style>
-              .about-me #particles-js{
-               max-width: 100%;width: 100%; opacity: .5;
-              } .particle-cont{z-index: 1;} .particle-cont{} canvas{ display: block; vertical-align: bottom; }  #particles-js{ opacity: .4;position:absolute; width: 100%; height: 100%;  background-image: url(""); background-repeat: repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
-            </style>
-        <script>particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":2,"direction":"bottom-left","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
+          .about-me #particles-js {
+            max-width: 100%;
+            width: 100%;
+            opacity: 0.5;
+          }
+          .particle-cont {
+            z-index: 1;
+          } 
+          canvas {
+            display: block;
+            vertical-align: bottom;
+          }
+          #particles-js {
+            opacity: 0.4;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("");
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+          } /* ---- stats.js ---- */
+          .count-particles {
+            display: none;
+          }
+          .js-count-particles {
+            font-size: 1.1em;
+          }
+          #stats,
+          .count-particles {
+            -webkit-user-select: none;
+            margin-top: 5px;
+            margin-left: 5px;
+          }
+          #stats {
+            border-radius: 3px 3px 0 0;
+            overflow: hidden;
+          }
+          .count-particles {
+            border-radius: 0 0 3px 3px;
+          }
+        </style>
+        <script>
+          particlesJS("particles-js", {
+            particles: {
+              number: { value: 80, density: { enable: true, value_area: 800 } },
+              color: { value: "#ffffff" },
+              shape: {
+                type: "circle",
+                stroke: { width: 0, color: "#000000" },
+                polygon: { nb_sides: 5 },
+                image: { src: "img/github.svg", width: 100, height: 100 },
+              },
+              opacity: {
+                value: 0.5,
+                random: false,
+                anim: {
+                  enable: false,
+                  speed: 1,
+                  opacity_min: 0.1,
+                  sync: false,
+                },
+              },
+              size: {
+                value: 3,
+                random: true,
+                anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+              },
+              line_linked: {
+                enable: false,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1,
+              },
+              move: {
+                enable: true,
+                speed: 2,
+                direction: "bottom-left",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: { enable: false, rotateX: 600, rotateY: 1200 },
+              },
+            },
+            interactivity: {
+              detect_on: "canvas",
+              events: {
+                onhover: { enable: false, mode: "repulse" },
+                onclick: { enable: false, mode: "push" },
+                resize: true,
+              },
+              modes: {
+                grab: { distance: 400, line_linked: { opacity: 1 } },
+                bubble: {
+                  distance: 400,
+                  size: 40,
+                  duration: 2,
+                  opacity: 8,
+                  speed: 3,
+                },
+                repulse: { distance: 200, duration: 0.4 },
+                push: { particles_nb: 4 },
+                remove: { particles_nb: 2 },
+              },
+            },
+            retina_detect: true,
+          });
+          var count_particles, stats, update;
+          stats = new Stats();
+          stats.setMode(0);
+          stats.domElement.style.position = "absolute";
+          stats.domElement.style.left = "0px";
+          stats.domElement.style.top = "0px";
+          document.body.appendChild(stats.domElement);
+          count_particles = document.querySelector(".js-count-particles");
+          update = function () {
+            stats.begin();
+            stats.end();
+            if (
+              window.pJSDom[0].pJS.particles &&
+              window.pJSDom[0].pJS.particles.array
+            ) {
+              count_particles.innerText =
+                window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+          };
+          requestAnimationFrame(update);
+        </script>
         <div class="about-intro px-4 py-14">
           <div
             class="flex flex-col-reverse md:flex-row-reverse my-4 md:my-24 items-center md:items-center justify-center md:justify-around about-me"
           >
             <div class="mt-2 md:mt-0 particle-cont">
               <h2>Sobre mí</h2>
-              <p>
-                Nací en un gris lugar en el este de Europa a finales de los 90.
-              </p>
-              <p>
-                Pocos años después me mudé a España donde fuí recibido por la
-                calidez sureña de Murcia y aquí es donde me crié y eduqué.
-              </p>
-              <br />
+
               <p>
                 Estudié el grado de Comunicación Audiovisual en la Universidad
-                de Murcia y Radboud Universitet(Paises Bajos) donde aprendí un
-                poco de todo dentro sobre ramas de los medios de comunicación,
-                aquí también fui introducido al diseño gráfico, la curiosidad
-                por el cual activó un apasionado entusiasmo autodidacta lleno de
-                descubrimientos y experimentación. Para mi trabajo de fin de
-                grado desarrollé un proyecto de un pequeño videojuego, durante
-                el cual tuve mi primer encuentro con la programación, el cual
-                despertó mi curiosidad sobre las posibilidades interactivas que
-                abre y, sobretodo, que es algo que podía estar a mi alcance.
+                de Murcia, donde aprendí un poco de todo dentro sobre ramas de
+                los medios de comunicación, aquí también fui introducido al
+                diseño gráfico, la curiosidad por el cual activó un apasionado
+                entusiasmo autodidacta lleno de descubrimientos y
+                experimentación. Para mi trabajo de fin de grado desarrollé un
+                proyecto de un pequeño videojuego, durante el cual tuve mi
+                primer encuentro con la programación, el cual despertó mi
+                curiosidad sobre las posibilidades interactivas que abre y,
+                sobretodo, que es algo que podía estar a mi alcance.
               </p>
               <br />
               <p>
@@ -225,7 +344,10 @@
                 <div class="examply">
                   <span>Ejemplo:</span>
                   <p>
-                    <a href="https://www.diegomarin.com/"
+                    <a
+                      href="https://www.diegomarin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Diego Marín (Diseño web y maquetación. Magento CMS)</a
                     >
                   </p>
@@ -266,7 +388,10 @@
                 <div class="examply">
                   <span>Ejemplo:</span>
                   <p>
-                    <a href="https://www.drool.es/"
+                    <a
+                      href="https://www.drool.es/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Drool (Desarrollo web custom con las herramientas de
                       Wordpress)</a
                     >
@@ -296,31 +421,25 @@
                 <div class="examply">
                   <span>Ejemplo:</span>
                   <p>
-                    <a href="https://schiffbauing.hellyes.ch/"
-                      >Kindlimann (Diseño y desarrollo en Wordpress. Trabajo
-                      para una agencia de Suiza)</a
+                    <a
+                      href="https://schiffbauing.hellyes.ch/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Kindlimann (Diseño + desarrollo en Wordpress. Trabajo
+                      para una agencia suiza)</a
                     >
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="about-other">
-                    <h3>Más sobre mí</h3>
-                    En mi tiempo libre me dedico a una serie de cosas entre ellas
-
-                    -Desarrollo de videojuegos(screenshots) 
-                        Me dedico al desarrollo de videojuegos a nivel amateur realizando pequeños proyectos donde 
-                    -Composición y producción de música
-                        Desde los 14 años me dedico a componer, grabar y producir mis propias canciones en multitud de estilos musicales
-                </div> -->
         </div>
       </section>
 
       <section id="tech">
         <div class="tech-wrap px-4 py-28">
           <div class="my-10">
-            <h2>Destrezas y conocimiento</h2>
+            <h2>Destrezas / conocimiento</h2>
             <p>Tecnología web y software con el que estoy familiarizado:</p>
           </div>
           <div class="tech-grid">
@@ -677,8 +796,301 @@
           </div>
         </div>
       </section>
+
+      <section id="other">
+        <div class="flight">
+          <div id="butterfly"></div>
+        </div>
+
+        <style>
+          #butterfly {
+            filter: drop-shadow(-1px -2px 40px #ffd2b1);
+            width: 102px;
+            height: 102px; /* Viewport-height */
+            /* margin: 2em auto; Little margin */
+            background: transparent
+              url("../sprites/butterfly-sprite2-small.png") 0 0 no-repeat; /* Our sprite as the viewport background */
+            animation: bflow 0.5s steps(12) infinite;
+          }
+          .flight {
+            animation: flight 3s forwards;
+            animation-play-state: paused;
+          }
+          .flow .flight {
+            animation-play-state: running;
+          }
+          /* Animation keyframes for the sprite */
+          @keyframes bflow {
+            100% {
+              background-position-x: -1368px;
+            }
+          }
+          @keyframes flight {
+            100% {
+              transform: translateX(400px);
+            }
+          }
+        </style>
+
+        <div class="about-other px-4">
+          <h3>Más sobre mí</h3>
+          <div class="examply">
+            <h4>Desarrollo videojuegos</h4>
+            <p>
+              Desde siempre he estado interesado en el desarrollo de
+              videojuegos, un interés que me ha llevado a aprender un poco de
+              todo: arte/ilustración, programación, sonido, diseño, etc. que me
+              permite desarrollar juegos de manera completamente independiente y
+              autosuficiente.
+              <br />Mi último proyecto fue
+              <a
+                href="https://romtuk.itch.io/butterflow-web"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Butterflow</a
+              >
+              un juego arcade desarrollado con Unity Engine. Además de eso
+              desarrollé
+              <a
+                href="https://romtuk.itch.io/espejismo"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Espejísmo</a
+              >
+              para mi TFG, mi primer toma de contacto con el desarrollo de
+              videojuegos, en el motor Godot.
+            </p>
+            <div class="gallery flex my-10">
+              <a
+                href="https://romtuk.itch.io/butterflow-web"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="../img/uxKAon.png" alt="Fotograma Butterflow"
+              /></a>
+              <a
+                href="https://romtuk.itch.io/espejismo"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="../img/espejismo.png" alt="Fotograma Espejismo"
+              /></a>
+            </div>
+          </div>
+
+          <div class="examply">
+            <h4>Composición + producción de música y sonido</h4>
+
+            <p>
+              Desde hace más de 15 años me dedico a componer, grabar y producir
+              mis propias canciones en multitud de estilos musicales, además de
+              ello a producir efectos de sonido que uso en proyectos multimedia
+              como videojuegos y vídeos.
+              <br />
+              Desde 2023 empezé a formar parte del videojuego educativo
+              <a
+                href="https://initori.com/start"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Aura Adventure" de Initori</a
+              >
+              dónde me he encargado del sonido: componiendo la <eri class="mm">música</eri> de la banda sonora y creando <eri class="ss">efectos de sonido</eri> a medida.
+            </p>
+            <div class="sound-ui">
+              <div class="m-row">
+                <button class="music-lib" data-url="musicA.mp3">A</button>
+                <button class="music-lib" data-url="musicB.mp3">B</button>
+                <button class="music-lib" data-url="musicC.mp3">C</button>
+                <button class="music-lib" data-url="musicD.mp3">D</button>
+                <button class="music-lib" data-url="portfoliost.ogg">0</button>
+              </div>
+              <div class="s-row">
+                <button class="music-lib" data-url="soundA.mp3">A</button>
+                <button class="music-lib" data-url="soundB.mp3">B</button>
+                <button class="music-lib" data-url="soundC.mp3">C</button>
+                <button class="music-lib" data-url="soundD.mp3">D</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <aside>
+      <div class="pl-txt">¿Música?</div>
+      <button role="button" aria-pressed="false" id="pl-btn"></button>
+      <audio src="../sounds/chip2.mp3" id="chip"></audio>
+      <audio src="" id="sfxplayer"></audio>
+      <audio src="../sounds/portfoliost.ogg" id="ost" loop></audio>
+    </aside>
+
+    <script>
+      let music = false;
+      const play = document.getElementById("pl-btn");
+      const ost = document.getElementById("ost");
+      const sfxplayer = document.getElementById("sfxplayer");
+      const chip = document.getElementById("chip");
+
+      function musicOn() {
+        chip.play();
+        ost.play();
+        music = true;
+        play.classList.add("playing");
+      }
+
+      play.addEventListener("click", () => {
+        if (ost.paused && !music) {
+          musicOn();
+        } else {
+          chip.play();
+          ost.pause();
+          music = false;
+          play.classList.remove("playing");
+        }
+      });
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState == "hidden") {
+          ost.pause();
+        } else if (document.visibilityState == "visible" && music) {
+          ost.play();
+        }
+      });
+
+      //
+      //Music SFX Section
+      //
+      const bMusic = document.querySelectorAll(".m-row .music-lib");
+      const bSound = document.querySelectorAll(".s-row .music-lib");
+
+      sfxplayer.addEventListener("ended", () => {
+        bSound.forEach((b) => b.classList.remove("activ"));
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Music buttons
+
+        bMusic.forEach((b) => {
+          b.addEventListener("click", () => {
+            const url = b.getAttribute("data-url");
+            ost.src = `../sounds/${url}`;
+            bMusic.forEach((b) => b.classList.remove("activ"));
+            b.classList.add("activ");
+            musicOn();
+          });
+        });
+        // SFX bs
+
+        bSound.forEach((b) => {
+          b.addEventListener("click", () => {
+            bSound.forEach((b) => b.classList.remove("activ"));
+            b.classList.add("activ");
+            const url = b.getAttribute("data-url");
+            sfxplayer.src = `../sounds/${url}`;
+            sfxplayer.play();
+          });
+        });
+      });
+    </script>
+
     <footer id="contact" class="bg-color2">
+      <!--  -->
+      <!-- particles.js container -->
+      <div id="stars"></div>
+      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <!-- stats.js lib -->
+      <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+      <style>
+               /* ---- reset ----   /* ---- particles.js container ---- */#stars canvas{  aspect-ratio: 1 / 1; width: 100%;  max-width: 100%;} #stars{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-position: 50% 50%;background-image: url("");
+        background-repeat: repeat;
+        background-size: cover; } */
+      </style>
+      <script>
+        particlesJS("stars", {
+          particles: {
+            number: { value: 120, density: { enable: true, value_area: 1000 } },
+            color: { value: "#ffffff" },
+            shape: {
+              type: "circle",
+              stroke: { width: 0, color: "#000000" },
+              polygon: { nb_sides: 3 },
+              image: { src: "img/github.svg", width: 100, height: 100 },
+            },
+            opacity: {
+              value: 0.4335829720141903,
+              random: true,
+              anim: { enable: true, speed: 1, opacity_min: 0, sync: false },
+            },
+            size: {
+              value: 1.5,
+              random: true,
+              anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+            },
+            line_linked: {
+              enable: false,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 0.10000000000000002,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 157.6665352778874,
+                rotateY: 157.6665352778874,
+              },
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: false, mode: "repulse" },
+              onclick: { enable: false, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              grab: { distance: 400, line_linked: { opacity: 1 } },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 },
+            },
+          },
+          retina_detect: true,
+        });
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function () {
+          stats.begin();
+          stats.end();
+          if (
+            window.pJSDom[0].pJS.particles &&
+            window.pJSDom[0].pJS.particles.array
+          ) {
+            count_particles.innerText =
+              window.pJSDom[0].pJS.particles.array.length;
+          }
+          requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      </script>
+      <!--  -->
       <div class="contact-wrap px-4 pt-28 pb-40">
         <h2>Contacto</h2>
         <div class="contact-info">
@@ -703,7 +1115,7 @@
             <a
               class="mx-4"
               target="_blank"
-              href="https://mail.google.com/mail/u/0/?fs=1&to=rom.tumakov@gmail.com&su=Hi Roman!&body=&tf=cm"
+              href="https://mail.google.com/mail/u/0/?fs=1&to=rom.tumakov@gmail.com&su=Hola Román!&body=&tf=cm"
             >
               <svg
                 id="gmail"
@@ -859,6 +1271,8 @@
           transform="translate(207.84 -221.55)"
         />
       </svg>
+      <img src="../sprites/grassblades.png" class="grassland" srcset="" />
+      <img src="../sprites/grassblades.png" class="grassland gl2" srcset="" />
     </footer>
 
     <!-- <div id="cookieConsentBanner" class="cookie-banner out">
@@ -915,6 +1329,7 @@
         const star = document.querySelectorAll(".ob");
         const moon = document.querySelectorAll(".obs");
         const sun = document.querySelectorAll(".exp");
+        const butterflow = document.querySelectorAll("#other");
 
         const obs1 = new IntersectionObserver((entries, observer) => {
           entries.forEach((entry) => {
@@ -950,7 +1365,17 @@
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("show");
-              }, 1000);
+              }, 2000);
+            }
+          });
+        });
+
+        const obs4 = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("flow");
+              }, 500);
             }
           });
         });
@@ -965,6 +1390,9 @@
 
         sun.forEach((a) => {
           obs3.observe(a);
+        });
+        butterflow.forEach((a) => {
+          obs4.observe(a);
         });
       });
     </script>
