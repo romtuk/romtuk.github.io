@@ -806,13 +806,14 @@
           #butterfly {
             filter: drop-shadow(-1px -2px 40px #ffd2b1);
             width: 102px;
-            height: 102px; /* Viewport-height */
-            /* margin: 2em auto; Little margin */
+            height: 102px; 
             background: transparent
               url("../sprites/butterfly-sprite2-small.png") 0 0 no-repeat; /* Our sprite as the viewport background */
             animation: bflow 0.5s steps(12) infinite;
           }
           .flight {
+            width: 102px;
+            height: 102px;
             animation: flight 3s forwards;
             animation-play-state: paused;
           }
@@ -827,7 +828,7 @@
           }
           @keyframes flight {
             100% {
-              transform: translateX(400px);
+              transform: translateX(40vw);
             }
           }
         </style>
