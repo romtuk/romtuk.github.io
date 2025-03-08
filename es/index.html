@@ -1351,10 +1351,19 @@
 
       var lunch = document.getElementById("lunch");
       var menu = document.getElementById("menu");
+      let menuState = false
+
 
       lunch.addEventListener("click", function () {
+        
         lunch.classList.toggle("served");
         menu.classList.toggle("served");
+        if(menuState){
+          body.classList.add("locked")
+        }
+        else{
+          body.classList.remove("locked")
+        }
       });
 
       let children = document.getElementById("menu").children;

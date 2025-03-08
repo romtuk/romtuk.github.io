@@ -90,7 +90,9 @@ footer a:has(img):hover img {
   /* border-radius: 0 9px 9px 0; */
   animation: present 1s 4s forwards ease;
 }
-
+.locked{
+  overflow: hidden;
+}
 @keyframes present {
   100% {
     left: 50%;
