@@ -284,13 +284,17 @@
                 los medios de comunicación, aquí también fui introducido al
                 diseño gráfico, la curiosidad por el cual activó un apasionado
                 entusiasmo autodidacta lleno de descubrimientos y
-                experimentación. Para mi trabajo de fin de grado desarrollé un
+                experimentación. 
+                </p>
+                <br/>
+                <p>
+                Para mi trabajo de fin de grado desarrollé un
                 proyecto de un pequeño videojuego, durante el cual tuve mi
                 primer encuentro con la programación, el cual despertó mi
                 curiosidad sobre las posibilidades interactivas que abre y,
                 sobretodo, que es algo que podía estar a mi alcance.
               </p>
-              <br />
+              <br/>
               <p>
                 Tras graduarme continué mi formación de manera autodidacta y
                 tiempo después, con un curso de programación web en una
@@ -919,10 +923,15 @@
                 <button class="music-lib" data-url="portfoliost.ogg"></button>
               </div>
               <div class="s-row">
-                <button class="music-lib" data-url="soundA.mp3"></button>
-                <button class="music-lib" data-url="soundB.mp3"></button>
-                <button class="music-lib" data-url="soundC.mp3"></button>
-                <button class="music-lib" data-url="soundD.mp3"></button>
+                <button class="music-lib" data-url="soundA.mp3" onclick="document.querySelector('#soundA').play()"></button>
+                <button class="music-lib" data-url="soundB.mp3" onclick="document.querySelector('#soundB').play()"></button>
+                <button class="music-lib" data-url="soundC.mp3" onclick="document.querySelector('#soundC').play()"></button>
+                <button class="music-lib" data-url="soundD.mp3" onclick="document.querySelector('#soundD').play()"></button>
+                
+                <audio src="../sounds/soundA.mp3" id="soundA"></audio>
+                <audio src="../sounds/soundB.mp3" id="soundB"></audio>
+                <audio src="../sounds/soundC.mp3" id="soundC"></audio>
+                <audio src="../sounds/soundD.mp3" id="soundD"></audio>
               </div>
             </div>
           </div>
@@ -990,15 +999,15 @@
         });
         // SFX bs
 
-        bSound.forEach((b) => {
-          b.addEventListener("click", () => {
-            bSound.forEach((b) => b.classList.remove("activ"));
-            b.classList.add("activ");
-            const url = b.getAttribute("data-url");
-            sfxplayer.src = `../sounds/${url}`;
-            sfxplayer.play();
-          });
-        });
+        // bSound.forEach((b) => {
+        //   b.addEventListener("click", () => {
+        //     bSound.forEach((b) => b.classList.remove("activ"));
+        //     b.classList.add("activ");
+        //     const url = b.getAttribute("data-url");
+        //     sfxplayer.src = `../sounds/${url}`;
+        //     sfxplayer.play();
+        //   });
+        // });
       });
     </script>
 
