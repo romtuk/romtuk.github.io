@@ -1351,7 +1351,7 @@
 
       var lunch = document.getElementById("lunch");
       var menu = document.getElementById("menu");
-      let menuState = false
+      let menuState = true
 
 
       lunch.addEventListener("click", function () {
@@ -1359,10 +1359,13 @@
         lunch.classList.toggle("served");
         menu.classList.toggle("served");
         if(menuState){
-          body.classList.add("locked")
-        }
+          
+          document.body.classList.add("locked")
+          menuState = false
+        } 
         else{
-          body.classList.remove("locked")
+          document.body.classList.remove("locked")
+          menuState = true
         }
       });
 
