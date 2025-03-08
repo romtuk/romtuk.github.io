@@ -97,14 +97,19 @@ footer a:has(img):hover img {
   }
 }
 @keyframes coolor {
-  100% {
-    transform: scale(1) translate(-50%, -50%);
+  70% {
+    transform: scale(1.1) translate(-50%, -50%) rotate(15deg);
+    border-color: transparent transparent transparent #e76300;
+  }
+  100%{
+    transform: scale(1) translate(-50%, -50%) rotate(0deg);
+    border-color: transparent transparent transparent var(--color0);
   }
 }
-.pl-txt {
+/* .pl-txt {
   color: var(--color0);
   transform: scale(1) translateX(0px);
-  /* animation: coolor 0.4s 5s forwards cubic-bezier(0.45, 0.03, 0.18, 1.25); */
+  animation: coolor 0.4s 5s forwards cubic-bezier(0.45, 0.03, 0.18, 1.25);
   position: relative;
   top: 60px;
   left: 50%;
@@ -113,7 +118,7 @@ footer a:has(img):hover img {
   backdrop-filter: blur(3px);
   padding: 1em;
   display: none;
-}
+} */
 .pl-btn {
   width: 24px;
   height: 24px;
@@ -122,8 +127,8 @@ footer a:has(img):hover img {
   border-width: 12px 0px 12px 20px;
   border-color: transparent transparent transparent var(--color0);
   transition: all 0.15s ease-out;
-  transform: scale(0) translate(-50%, -50%);
-  animation: coolor 0.3s 5.75s forwards cubic-bezier(0.45, 0.03, 0.18, 1.5);
+  transform: scale(0) translate(-50%, -50%) rotate(0deg);
+  animation: coolor 0.5s 5.75s forwards cubic-bezier(0.45, 0.03, 0.18, 1.5);
   position: absolute;
   top: 50%;
   /* transform: translate(-50%, -50%); */
