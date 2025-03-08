@@ -35,6 +35,19 @@
         <!-- <span class="ml-2">Román</span> -->
       </a>
 
+      <div class="aside">
+        <!-- <div class="pl-txt">¿Música?</div> -->
+        <button
+          role="button"
+          aria-pressed="false"
+          id="pl-btn"
+          class="pl-btn"
+        ></button>
+        <audio src="../sounds/chip2.mp3" id="chip"></audio>
+        <audio src="" id="sfxplayer"></audio>
+        <audio src="../sounds/portfoliost.ogg" id="ost" loop></audio>
+      </div>
+
       <div id="lunch" class="block md:hidden">
         <span class="l1"></span>
         <span class="l2"></span>
@@ -327,8 +340,8 @@
 
                 <p>
                   En <strong>Openred</strong> trabajamos en proyectos e-commerce
-                  de gran escala gestionados con el CMS <strong>Magento</strong
-                  ><br />
+                  de gran escala gestionados con el CMS
+                  <strong>Magento</strong>.<br />
                   Me dediqué a desarrollar
                   <strong>comercios electrónicos</strong> en el ecosistema de
                   Magento, y participé <strong>diseñando</strong> y rediseñando
@@ -440,7 +453,7 @@
       <section id="tech">
         <div class="tech-wrap px-4 py-28">
           <div class="my-10">
-            <h2>Destrezas / conocimiento</h2>
+            <h2>Destrezas</h2>
             <p>Tecnología web y software con el que estoy familiarizado:</p>
           </div>
           <div class="tech-grid">
@@ -841,9 +854,8 @@
             <p>
               Desde siempre he estado interesado en el desarrollo de
               videojuegos, un interés que me ha llevado a aprender un poco de
-              todo: arte/ilustración, programación, sonido, diseño, etc. que me
-              permite desarrollar juegos de manera completamente independiente y
-              autosuficiente.
+              todo: arte/ilustración, programación, sonido y diseño. Lo que me
+              permite desarrollar juegos de manera completamente independiente.
               <br />Mi último proyecto fue
               <a
                 href="https://romtuk.itch.io/butterflow-web"
@@ -887,7 +899,7 @@
               ello a producir efectos de sonido que uso en proyectos multimedia
               como videojuegos y vídeos.
               <br />
-              Desde 2023 empezé a formar parte del videojuego educativo
+              Desde 2023 empecé a formar parte del videojuego educativo
               <a
                 href="https://initori.com/start"
                 target="_blank"
@@ -917,17 +929,10 @@
         </div>
       </section>
     </main>
-    <aside>
-      <div class="pl-txt">¿Música?</div>
-      <button role="button" aria-pressed="false" id="pl-btn"></button>
-      <audio src="../sounds/chip2.mp3" id="chip"></audio>
-      <audio src="" id="sfxplayer"></audio>
-      <audio src="../sounds/portfoliost.ogg" id="ost" loop></audio>
-    </aside>
 
     <script>
       let music = false;
-      const play = document.getElementById("pl-btn");
+      const play = document.getElementById("pl-btn"); 
       const ost = document.getElementById("ost");
       const sfxplayer = document.getElementById("sfxplayer");
       const chip = document.getElementById("chip");
@@ -937,7 +942,7 @@
         setTimeout(() => {
           ost.play();
         }, 500);
-        
+
         music = true;
         play.classList.add("playing");
       }
