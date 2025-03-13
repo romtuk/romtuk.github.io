@@ -72,7 +72,7 @@ acompañados de una experiencia de usuario única y agradable"
     />
   </head>
 
-  <body class="">
+  <body>
     <div class="cover h-full w-full bg-color3"></div>
     <header
       class="flex flex-row text-color0 justify-between items-center px-6 py-3"
@@ -155,9 +155,11 @@ acompañados de una experiencia de usuario única y agradable"
             <img src="../img/logo.svg" alt="Logotype RT" width="168" />
           </div>
           <div id="intro-txt">
-            <h1 class="font-bold text-3xl">Bienvenid@ a mi web!</h1>
+            <h1 class="font-bold text-3xl">
+              Bienvenido a mi pequeño rincón en la web
+            </h1>
             <p class="my-3 flex gap-1 relative">
-              Hola! Soy <strong>Román,</strong>
+              Hola, soy <strong>Román,</strong>
               <span>
                 <script
                   src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
@@ -199,7 +201,6 @@ acompañados de una experiencia de usuario única y agradable"
 
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-        <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
         <style>
           .about-me #particles-js {
             max-width: 100%;
@@ -222,25 +223,6 @@ acompañados de una experiencia de usuario única y agradable"
             background-repeat: repeat;
             background-size: cover;
             background-position: 50% 50%;
-          } /* ---- stats.js ---- */
-          .count-particles {
-            display: none;
-          }
-          .js-count-particles {
-            font-size: 1.1em;
-          }
-          #stats,
-          .count-particles {
-            -webkit-user-select: none;
-            margin-top: 5px;
-            margin-left: 5px;
-          }
-          #stats {
-            border-radius: 3px 3px 0 0;
-            overflow: hidden;
-          }
-          .count-particles {
-            border-radius: 0 0 3px 3px;
           }
         </style>
         <script>
@@ -310,27 +292,6 @@ acompañados de una experiencia de usuario única y agradable"
             },
             retina_detect: true,
           });
-          var count_particles, stats, update;
-          stats = new Stats();
-          stats.setMode(0);
-          stats.domElement.style.position = "absolute";
-          stats.domElement.style.left = "0px";
-          stats.domElement.style.top = "0px";
-          document.body.appendChild(stats.domElement);
-          count_particles = document.querySelector(".js-count-particles");
-          update = function () {
-            stats.begin();
-            stats.end();
-            if (
-              window.pJSDom[0].pJS.particles &&
-              window.pJSDom[0].pJS.particles.array
-            ) {
-              count_particles.innerText =
-                window.pJSDom[0].pJS.particles.array.length;
-            }
-            requestAnimationFrame(update);
-          };
-          requestAnimationFrame(update);
         </script>
         <div class="about-intro px-4 py-14">
           <div
@@ -407,7 +368,7 @@ acompañados de una experiencia de usuario única y agradable"
                   <p>2021</p>
                 </div>
 
-                <span class="shadow">
+                
                   <p>
                     En <strong>Openred</strong> trabajamos en proyectos
                     e-commerce de gran escala gestionados con el CMS
@@ -437,7 +398,7 @@ acompañados de una experiencia de usuario única y agradable"
                       >
                     </p>
                   </div>
-                </span>
+                
               </div>
             </div>
             <div class="about-point pr-0 flex flex-row">
@@ -456,8 +417,7 @@ acompañados de una experiencia de usuario única y agradable"
                     >Drool Studios</a
                   >
                   <p>2021 <span>- 2022</span></p>
-                </div>
-                <span class="shadow">
+                </div> 
                   <p>
                     Durante mi tiempo en <strong>Drool Studios</strong> el
                     trabajo estuvo mayormente enfocado en el desarrollo a
@@ -483,8 +443,7 @@ acompañados de una experiencia de usuario única y agradable"
                         Wordpress)</a
                       >
                     </p>
-                  </div>
-                </span>
+                  </div> 
               </div>
             </div>
             <div class="about-point pr-0 flex flex-row">
@@ -1232,14 +1191,10 @@ acompañados de una experiencia de usuario única y agradable"
     </script>
 
     <footer id="contact" class="bg-color2">
-      <!--  -->
-      <!-- particles.js container -->
       <div id="stars"></div>
       <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-      <!-- stats.js lib -->
-      <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
       <style>
-               /* ---- reset ----   /* ---- particles.js container ---- */#stars canvas{  aspect-ratio: 1 / 1; width: 100%;  max-width: 100%;} #stars{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-position: 50% 50%;background-image: url("");
+             /* ---- particles.js container ---- */#stars canvas{  aspect-ratio: 1 / 1; width: 100%;  max-width: 100%;} #stars{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-position: 50% 50%;background-image: url("");
         background-repeat: repeat;
         background-size: cover; } */
       </style>
@@ -1309,27 +1264,6 @@ acompañados de una experiencia de usuario única y agradable"
           },
           retina_detect: true,
         });
-        var count_particles, stats, update;
-        stats = new Stats();
-        stats.setMode(0);
-        stats.domElement.style.position = "absolute";
-        stats.domElement.style.left = "0px";
-        stats.domElement.style.top = "0px";
-        document.body.appendChild(stats.domElement);
-        count_particles = document.querySelector(".js-count-particles");
-        update = function () {
-          stats.begin();
-          stats.end();
-          if (
-            window.pJSDom[0].pJS.particles &&
-            window.pJSDom[0].pJS.particles.array
-          ) {
-            count_particles.innerText =
-              window.pJSDom[0].pJS.particles.array.length;
-          }
-          requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
       </script>
       <!--  -->
       <div class="contact-wrap px-4 pt-28 pb-40">
@@ -1551,8 +1485,6 @@ acompañados de una experiencia de usuario única y agradable"
               }
             });
           }
-        } else {
-          console.log("mediaquery else");
         }
       }
 
